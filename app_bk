@@ -1,0 +1,39 @@
+var express = require('express');
+const app = express();
+const port = 8210; 
+
+var employee = [
+        {
+            "id":1,
+            "name": "john"
+
+        },
+        {
+            "id":2,
+            "name": "Bala"
+
+        },
+        {
+            "id":3,
+            "name": "suresh"
+
+        }
+]
+
+
+
+//get 
+app.get('/',(req,res) => {
+    res.send("Welcome to NodeApi3")
+})
+
+//Employee
+app.get('/employee',(req,res) => {
+    res.send(employee)
+})
+
+
+app.listen(port,() => {
+    console.log(`listening on port no ${port}`)
+})
+
